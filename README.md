@@ -1,4 +1,5 @@
 # Sky Light
+Python server designed to run on Raspberry Pi to control DIY electronic projects.
 
 | Module Name | Function | Current Version |
 |-------------|----------|-----------------|
