@@ -4,6 +4,7 @@ import json
 import logging
 import pathlib 
 
+
 # PATH CONSTANTS
 CWD = pathlib.Path(__file__).resolve().parent
 SERVICES_CONFIG_PATH = CWD / "modules.json"
@@ -20,6 +21,8 @@ def load_route_config():
     print(routing_config)
 
 routes = web.RouteTableDef()
+
+
 @routes.get("/")
 async def index(request):
     return web.json_response({"msg": "It appears you are lost"})
