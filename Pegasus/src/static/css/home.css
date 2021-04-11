@@ -132,7 +132,8 @@ h4,
 h5,
 text,
 p,
-a {
+a,
+strong {
   color: #D2D2D2;
   font-family: Helvetica;
 }
@@ -143,7 +144,8 @@ h4.ts-1,
 h5.ts-1,
 text.ts-1,
 p.ts-1,
-a.ts-1 {
+a.ts-1,
+strong.ts-1 {
   color: #D2D2D2;
 }
 h1.ts-2,
@@ -153,7 +155,8 @@ h4.ts-2,
 h5.ts-2,
 text.ts-2,
 p.ts-2,
-a.ts-2 {
+a.ts-2,
+strong.ts-2 {
   color: #A7A7A7;
 }
 h1.ts-3,
@@ -163,7 +166,8 @@ h4.ts-3,
 h5.ts-3,
 text.ts-3,
 p.ts-3,
-a.ts-3 {
+a.ts-3,
+strong.ts-3 {
   color: #202020;
 }
 h1.ts-4,
@@ -173,8 +177,31 @@ h4.ts-4,
 h5.ts-4,
 text.ts-4,
 p.ts-4,
-a.ts-4 {
+a.ts-4,
+strong.ts-4 {
   color: #0f0f0f;
+}
+h1.error,
+h2.error,
+h3.error,
+h4.error,
+h5.error,
+text.error,
+p.error,
+a.error,
+strong.error {
+  color: #ff5959;
+}
+h1.success,
+h2.success,
+h3.success,
+h4.success,
+h5.success,
+text.success,
+p.success,
+a.success,
+strong.success {
+  color: #4fe082;
 }
 h1.italic,
 h2.italic,
@@ -183,7 +210,8 @@ h4.italic,
 h5.italic,
 text.italic,
 p.italic,
-a.italic {
+a.italic,
+strong.italic {
   font-style: italic;
 }
 h1.condensed,
@@ -193,7 +221,8 @@ h4.condensed,
 h5.condensed,
 text.condensed,
 p.condensed,
-a.condensed {
+a.condensed,
+strong.condensed {
   font-stretch: condensed;
 }
 h1.ultralight,
@@ -203,7 +232,8 @@ h4.ultralight,
 h5.ultralight,
 text.ultralight,
 p.ultralight,
-a.ultralight {
+a.ultralight,
+strong.ultralight {
   font-weight: 100;
 }
 h1.light,
@@ -213,7 +243,8 @@ h4.light,
 h5.light,
 text.light,
 p.light,
-a.light {
+a.light,
+strong.light {
   font-weight: 300;
 }
 h1.medium,
@@ -223,7 +254,8 @@ h4.medium,
 h5.medium,
 text.medium,
 p.medium,
-a.medium {
+a.medium,
+strong.medium {
   font-weight: 500;
 }
 h1.bold,
@@ -233,7 +265,8 @@ h4.bold,
 h5.bold,
 text.bold,
 p.bold,
-a.bold {
+a.bold,
+strong.bold {
   font-weight: bold;
 }
 h1.black,
@@ -243,7 +276,8 @@ h4.black,
 h5.black,
 text.black,
 p.black,
-a.black {
+a.black,
+strong.black {
   font-weight: black;
 }
 h1.override,
@@ -253,7 +287,8 @@ h4.override,
 h5.override,
 text.override,
 p.override,
-a.override {
+a.override,
+strong.override {
   font-size: inherit;
 }
 

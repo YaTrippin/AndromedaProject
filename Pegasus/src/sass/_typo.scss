@@ -27,7 +27,8 @@ h4,
 h5,
 text,
 p,
-a {  
+a, 
+strong {  
     color: $text-shade-1;   
     font-family: Helvetica;   
 
@@ -46,6 +47,14 @@ a {
 
     &.ts-4 {
         color: $text-shade-4;
+    }
+
+    &.error {
+        color: $error;
+    }
+
+    &.success {
+        color: $success;
     }
 
     &.italic {
