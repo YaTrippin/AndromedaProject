@@ -1,13 +1,16 @@
 <script>
     import Module from './Module.svelte';
     import MediaQuery from '../../layout/MediaQuery.svelte';
+    import { onMount } from 'svelte';
+    let modules = []
     
-    let modules = [
-        { name: "Calendar", version: "0", desc: "yet another calendar"},
-        { name: "Todos", version: "1", desc: "there's nothing todo"},
-        { name: "Lights", version: "2", desc: "it's still dark here"},
-        { name: "Linux", version: "2", desc: "i use arch btw"}
-    ]
+    onMount(async () => {
+        await fetch('http://localhost:8080/get_modules')
+        .then(r => r.json())
+        .then(data => {
+            modules = data;
+        });
+    })
 </script>
 
 <style lang="scss">
@@ -25,7 +28,12 @@
         padding: $gap;
         @include flexbox($direction: column, $align-perp: stretch);
     }
+    info {
+        grid-column: 1 / 5;
+        grid-row: 2 / 3;
+    }
 </style>
+
 <MediaQuery query="(max-width: 599px)">
     <flexlist>
         {#each modules as module}
@@ -37,6 +45,8 @@
     <grid>
         {#each modules as module}
             <Module {...module}/>
+        {:else}
+            <info class="t-1 ts-2 medium">There doesn't appear to be any modules running</info>
         {/each}
     </grid>
 </MediaQuery>

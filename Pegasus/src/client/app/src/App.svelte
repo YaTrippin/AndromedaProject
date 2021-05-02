@@ -41,8 +41,11 @@
   
 </style>
 
-<page>
+<svelte:head>
+  <title>P1</title>
+</svelte:head>
 
+<page>
   <Router primary={false}>
     {#if showTopBar}
       <TopBar></TopBar>

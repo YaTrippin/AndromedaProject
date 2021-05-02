@@ -1,7 +1,13 @@
 <script>
+    import { useNavigate } from 'svelte-navigator';
+
+    let navigate = useNavigate();
+    
     export let name;
     export let version;
     export let desc;
+    export let url = '/';
+    export let running;
     export let mobile = false;
 </script>
 
@@ -54,13 +60,13 @@
 </style>
 
 {#if mobile}
-    <card class="mobile">
+    <card class="mobile" on:click="{() => { navigate(url) }}">
         <span class="title medium">{name}</span>
         <span class="ts-2 t-3">{version != 0 ? `v${version}` : ''}</span>
     </card>
 {:else}
-<card>
-    <div class="title medium">{name}<span class="ts-2 t-4">{version != 0 ? ` v${version}` : ' '} <span></div>
+<card on:click="{() => { navigate(url) }}">
+    <div class="title medium" class:ts-3={!running}>{name}<span class="ts-2 t-4">{version != 0 ? ` v${version}` : ' '} </span></div>
     <p class="content ts-4 medium">{desc}</p>
 </card>
 {/if}

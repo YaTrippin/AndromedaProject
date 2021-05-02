@@ -1,5 +1,6 @@
 <script>
     import MediaQuery from './MediaQuery.svelte';
+    import { blur } from 'svelte/transition';
 </script>
 <style lang="scss"> 
     .wrapper {
@@ -17,7 +18,7 @@
         @include flexitem(1, 0, 60%); 
     }
 </style>
-<div class="wrapper">
+<div class="wrapper" transition:blur>
     <MediaQuery query="(min-width: 600px)">  
         <div style="order: 1" class="left" class:pad={!$$slots.left}>
             <slot name="left"><div/></slot>
